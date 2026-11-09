@@ -1,3 +1,0 @@
-[2026-11-09T18:04:19.942Z] [INFO] Webmail server listening on 3000 {"port":3000,"env":"development","domain":"godlymushroom.xyz"}
-[2026-11-09T18:04:38.721Z] [INFO] GET / 200 - 4ms
-[2026-11-09T18:04:38.788Z] [INFO] GET /favicon.ico 404 - 2ms
