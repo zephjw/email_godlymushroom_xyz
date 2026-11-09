@@ -1,0 +1,153 @@
+{
+  "planHash": "335c382d02d185d1ad07de651b28826723c231e05944790ee953cc42a1ecb00a",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-11-09T17:35:43.3826065Z",
+  "retryCount": 0,
+  "resetBaseline": true,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 921,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "build-script",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\n\u003E godlymushroom-webmail@2.0.1 build\n\u003E node -e \u0022console.log(\u0027Build complete\u0027)\u0022\n\nBuild complete\n",
+        "durationMs": 239
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\n\u003E godlymushroom-webmail@2.0.1 test\n\u003E vitest run\n\n\n RUN  v5.1.0 /home/john/Downloads/email_godlymushroom_xyz/nodejs\n\n\n Test Files  1 passed (1)\n      Tests  2 passed (2)\n   Start at  12:35:40\n   Duration  380ms (tests 93%, transform 4%, import 2%, worker 1%)\n\n",
+        "durationMs": 817,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 2,
+          "testsPassed": 2,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": false
+        }
+      },
+      {
+        "name": "health-endpoint",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n{\u0022status\u0022:\u0022ok\u0022}\n--- server output ---\n\n\u003E godlymushroom-webmail@2.0.1 start\n\u003E node server.js\n\nWebmail server listening on 3000\n",
+        "durationMs": 523
+      },
+      {
+        "name": "home-route",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\n\u003Chtml lang=\u0022en\u0022\u003E\u003Chead\u003E\u003Cmeta charset=\u0022utf-8\u0022\u003E\u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width,initial-scale=1\u0022\u003E\u003Ctitle\u003EWebmail | godlymushroom.xyz\u003C/title\u003E\u003Cstyle\u003Ebody{font-family:system-ui,sans-serif;margin:0;background:#f4f7fb;color:#172033}.box{max-width:560px;margin:8vh auto;padding:2rem;background:#fff;border:1px solid #dfe5ef;border-radius:16px;box-shadow:0 8px 30px #17203318}h1{margin-top:0}label{display:block;margin:1rem 0 .35rem}input,button{font:inherit;padding:.75rem;border-radius:8px}input{width:100%;box-sizing:border-box;border:1px solid #cfd6e2}button{border:0;background:#6557e8;color:#fff;font-weight:700;cursor:pointer}.hidden{display:none}.error{color:#9b1c1c;background:#ffe5e5;padding:.75rem;border-radius:8px}.muted{color:#667085}.mail{display:block;width:100%;margin:.5rem 0;text-align:left;background:#f8f9ff;color:#172033;border:1px solid #dfe5ef}.toolbar{display:flex;justify-content:space-between;gap:1rem;align-items:center}\u003C/style\u003E\u003C/head\u003E\u003Cbody\u003E\u003Cmain class=\u0022box\u0022\u003E\u003Csection id=\u0022login\u0022\u003E\u003Ch1\u003EWebmail\u003C/h1\u003E\u003Cp class=\u0022muted\u0022\u003ESecure email for godlymushroom.xyz\u003C/p\u003E\u003Cp id=\u0022error\u0022 class=\u0022error hidden\u0022\u003E\u003C/p\u003E\u003Cform id=\u0022loginForm\u0022\u003E\u003Clabel for=\u0022email\u0022\u003EEmail\u003C/label\u003E\u003Cinput id=\u0022email\u0022 type=\u0022email\u0022 required placeholder=\u0022you@godlymushroom.xyz\u0022\u003E\u003Clabel for=\u0022password\u0022\u003EPassword\u003C/label\u003E\u003Cinput id=\u0022password\u0022 type=\u0022password\u0022 required autocomplete=\u0022current-password\u0022\u003E\u003Cp\u003E\u003Cbutton type=\u0022submit\u0022\u003ESign in\u003C/button\u003E\u003C/p\u003E\u003C/form\u003E\u003C/section\u003E\u003Csection id=\u0022inbox\u0022 class=\u0022hidden\u0022\u003E\u003Cdiv class=\u0022toolbar\u0022\u003E\u003Ch1\u003EInbox\u003C/h1\u003E\u003Cbutton id=\u0022logout\u0022 type=\u0022button\u0022\u003ESign out\u003C/button\u003E\u003C/div\u003E\u003Cp id=\u0022status\u0022 class=\u0022muted\u0022\u003E\u003C/p\u003E\u003Cdiv id=\u0022messages\u0022\u003E\u003C/div\u003E\u003C/section\u003E\u003C/main\u003E\u003Cscript\u003Econst $=s=\u003Edocument.querySelector(s);const err=t=\u003E{$(\u0027#error\u0027).textContent=t;$(\u0027#error\u0027).classList.remove(\u0027hidden\u0027)};async function api(p,o={}){const r=await fetch(\u0027/api\u0027\u002Bp,{credentials:\u0027same-origin\u0027,headers:{\u0027Content-Type\u0027:\u0027application/json\u0027},...o});const d=await r.json().catch(()=\u003E({}));if(!r.ok)throw Error(d.message||\u0027Request failed\u0027);return d}$(\u0027#loginForm\u0027).onsubmit=async e=\u003E{e.preventDefault();$(\u0027#error\u0027).classList.add(\u0027hidden\u0027);try{const d=await api(\u0027/login\u0027,{method:\u0027POST\u0027,body:JSON.stringify({email:$(\u0027#email\u0027).value,password:$(\u0027#password\u0027).value})});$(\u0027#login\u0027).classList.add(\u0027hidden\u0027);$(\u0027#inbox\u0027).classList.remove(\u0027hidden\u0027);$(\u0027#status\u0027).textContent=d.userEmail;const x=await api(\u0027/emails?folder=INBOX\u0027);$(\u0027#messages\u0027).innerHTML=x.emails.map(m=\u003E\u0060\u003Cbutton class=\u0022mail\u0022 type=\u0022button\u0022\u003E\u003Cstrong\u003E${String(m.subject||\u0027(no subject)\u0027).replace(/[\u003C\u003E]/g,\u0027\u0027)}\u003C/strong\u003E\u003Cbr\u003E\u003Cspan class=\u0022muted\u0022\u003E${String(m.from||\u0027\u0027).replace(/[\u003C\u003E]/g,\u0027\u0027)}\u003C/span\u003E\u003C/button\u003E\u0060).join(\u0027\u0027)||\u0027\u003Cp class=\u0022muted\u0022\u003ENo messages.\u003C/p\u003E\u0027}catch(e){err(e.message)}};$(\u0027#logout\u0027).onclick=async()=\u003E{await api(\u0027/logout\u0027,{method:\u0027POST\u0027});location.reload()};\u003C/script\u003E\u003C/body\u003E\u003C/html\u003E\n--- server output ---\n\n\u003E godlymushroom-webmail@2.0.1 start\n\u003E node server.js\n\nWebmail server listening on 3000\n",
+        "durationMs": 517
+      },
+      {
+        "name": "mailbox-list-requires-session",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 401\n{\u0022message\u0022:\u0022Your session has expired\u0022}\n--- server output ---\n\n\u003E godlymushroom-webmail@2.0.1 start\n\u003E node server.js\n\nWebmail server listening on 3000\n",
+        "durationMs": 511
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "/usr/bin/npm",
+        "args": [
+          "ci"
+        ],
+        "cwd": "/home/john/Downloads/email_godlymushroom_xyz/nodejs",
+        "env": {},
+        "prependPath": [],
+        "platform": "linux"
+      },
+      {
+        "source": "build-script",
+        "resolvedExecutable": "/usr/bin/npm",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "/home/john/Downloads/email_godlymushroom_xyz/nodejs",
+        "env": {},
+        "prependPath": [],
+        "platform": "linux"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "/usr/bin/npm",
+        "args": [
+          "test"
+        ],
+        "cwd": "/home/john/Downloads/email_godlymushroom_xyz/nodejs",
+        "env": {},
+        "prependPath": [],
+        "platform": "linux"
+      },
+      {
+        "source": "health-endpoint",
+        "resolvedExecutable": "/usr/bin/npm",
+        "args": [
+          "start"
+        ],
+        "cwd": "/home/john/Downloads/email_godlymushroom_xyz/nodejs",
+        "env": {},
+        "prependPath": [],
+        "platform": "linux"
+      },
+      {
+        "source": "home-route",
+        "resolvedExecutable": "/usr/bin/npm",
+        "args": [
+          "start"
+        ],
+        "cwd": "/home/john/Downloads/email_godlymushroom_xyz/nodejs",
+        "env": {},
+        "prependPath": [],
+        "platform": "linux"
+      },
+      {
+        "source": "mailbox-list-requires-session",
+        "resolvedExecutable": "/usr/bin/npm",
+        "args": [
+          "start"
+        ],
+        "cwd": "/home/john/Downloads/email_godlymushroom_xyz/nodejs",
+        "env": {},
+        "prependPath": [],
+        "platform": "linux"
+      }
+    ]
+  }
+}
