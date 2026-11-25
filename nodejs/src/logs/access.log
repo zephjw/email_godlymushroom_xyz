@@ -4,3 +4,17 @@
 [2026-11-25T16:16:40.348Z] [INFO] POST /api/login 401 - 4947ms
 [2026-11-25T16:17:21.837Z] [INFO] POST /api/login 401 - 5253ms
 [2026-11-25T16:19:09.102Z] [INFO] POST /api/login 401 - 5239ms
+[2026-11-25T16:24:25.993Z] [INFO] Received SIGINT. Shutting down gracefully...
+[2026-11-25T16:35:45.276Z] [INFO] Webmail server listening on 37737 {"port":37737,"env":"test","domain":"godlymushroom.xyz"}
+[2026-11-25T16:35:45.288Z] [INFO] Webmail server listening on 36651 {"port":36651,"env":"test","domain":"godlymushroom.xyz"}
+[2026-11-25T16:35:45.361Z] [INFO] GET /health 200 - 2ms
+[2026-11-25T16:35:45.362Z] [INFO] GET /health 200 - 3ms
+[2026-11-25T16:35:45.366Z] [INFO] GET /health 200 - 0ms
+[2026-11-25T16:35:45.366Z] [INFO] GET /health 200 - 0ms
+[2026-11-25T16:35:45.370Z] [INFO] GET /api/emails 401 - 1ms
+[2026-11-25T16:35:45.371Z] [INFO] Received SIGTERM. Shutting down gracefully...
+[2026-11-25T16:35:45.371Z] [INFO] GET / 200 - 2ms
+[2026-11-25T16:35:45.373Z] [INFO] GET /api/emails 401 - 1ms
+[2026-11-25T16:35:45.379Z] [INFO] POST /api/send-email 401 - 0ms
+[2026-11-25T16:35:45.382Z] [INFO] POST /api/login 400 - 1ms
+[2026-11-25T16:35:45.382Z] [INFO] Received SIGTERM. Shutting down gracefully...

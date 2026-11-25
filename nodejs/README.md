@@ -17,6 +17,8 @@ This version replaces the demo inbox with a working Hostinger Email client for m
 
 ## Install
 
+Requires Node.js 24.x.
+
 ```bash
 npm install
 ```
